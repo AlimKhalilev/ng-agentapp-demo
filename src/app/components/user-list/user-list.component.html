@@ -1,0 +1,18 @@
+<div class="user-list">
+    <h2 class="user-list__caption">Список пользователей</h2>
+    <div class="user-list__body">
+        <div class="user-list__loader loader" *ngIf="userService.loading"></div>
+        <ng-container *ngIf="userService.loading === false">
+            <ng-container *ngIf="userService.userList.length === 0">
+                <span>Список пользователей пуст</span>
+            </ng-container>
+            <div class="user-list__items" *ngIf="userService.userList.length > 0">
+                <ul class="user-list__user user" *ngFor="let user of userService.userList">
+                    <li class="user__item user__name link" [routerLink]="['/user-profile', user.id]">{{ user.name }}</li>
+                    <li class="user__item user__email">{{ user.email }}</li>
+                </ul>
+            </div>
+        </ng-container>
+        <p class="user-list__error error" *ngIf="userService.errorMsg">{{ userService.errorMsg }}</p>
+    </div>
+</div>

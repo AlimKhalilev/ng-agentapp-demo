@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --gray-transparent: rgba(0, 0, 0, 0.059);
+
+    --gray-100: #F0F0F0;
+    --gray-300: #919797;
+
+    --primary-700: #2681D7;
+    --primary-800: #2066A8;
+
+    --link: #2066A8;
+    --danger: #FA4D56;
+}
+
+*, *::before, *::after {
+    font-family: 'Segoe UI';
+}
+
+.font-basic {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--link);
+    cursor: pointer;
+}
+
+.error {
+    color: var(--danger);
+}
+
+.loader {
+    --size: 3px;
+    width: calc(var(--size) * 12); /* the size */
+    padding: var(--size); /* the border thickness */
+    background-color: black; /* the color */
+    aspect-ratio: 1;
+    border-radius: 50%;
+    --_m: conic-gradient(#0000, #000), linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    box-sizing: border-box;
+    animation: load 1s linear infinite;
+}
+
+@keyframes load {
+    to {
+        transform: rotate(1turn);
+    }
+}

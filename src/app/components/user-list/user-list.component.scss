@@ -1,0 +1,53 @@
+.user-list {
+
+    // .user-list__caption
+
+    &__caption {
+    }
+
+    // .user-list__body
+
+    &__body {
+
+    }
+
+    // .user-list__items
+
+    &__items {
+        max-height: 700px;
+        overflow-y: auto;
+    }
+
+    // .user-list__user
+
+    &__user {
+    }
+
+    // .user-list__loader
+
+    &__loader {
+    }
+
+    // .user-list__error
+
+    &__error {
+    }
+}
+
+.user {
+
+    // .user__item
+
+    &__item {
+    }
+
+    // .user__name
+
+    &__name {
+    }
+
+    // .user__email
+
+    &__email {
+    }
+}

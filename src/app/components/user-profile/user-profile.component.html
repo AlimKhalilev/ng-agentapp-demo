@@ -1,0 +1,15 @@
+<ng-container *ngIf="user; else noUserTpl;">
+    <div class="user-profile">
+        <h3 class="user-profile__caption">{{ user.name }}</h3>
+        <ul class="user-profile__list">
+            <li class="user-profile__item">Ник: <strong>{{ user.username }}</strong></li>
+            <li class="user-profile__item">Телефон: <strong>{{ user.phone }}</strong></li>
+            <li class="user-profile__item">Почта: <strong>{{ user.email }}</strong></li>
+            <li class="user-profile__item">Сайт: <strong>{{ user.website }}</strong></li>
+        </ul>
+    </div>
+</ng-container>
+
+<ng-template #noUserTpl>
+    <p>Пользователь не найден</p>
+</ng-template>

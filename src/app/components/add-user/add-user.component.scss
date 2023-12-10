@@ -1,0 +1,67 @@
+.add-user {
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    // .form__loading
+
+    &__loading {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    // .form__controls
+
+    &__controls {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    // .form__control
+
+    &__control {
+        border-radius: 4px;
+        border: 1px solid var(--gray-transparent);
+        padding: 6px 12px;
+        
+        &:focus-visible {
+            outline: 1px solid var(--black);
+        }
+    }
+
+    // .form__footer
+
+    &__footer {
+    }
+
+    // .form__btn
+
+    &__btn {
+        border: none;
+        padding: 7px 12px;
+        border-radius: 4px;
+        width: 100%;
+        background-color: var(--primary-700);
+        color: var(--white);
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--primary-800);
+        }
+
+        &:disabled {
+            pointer-events: none;
+            background-color: var(--gray-100);
+            color: var(--gray-300);
+        }
+
+        &:focus-visible {
+            outline: 1px solid var(--black);
+        }
+    }
+}

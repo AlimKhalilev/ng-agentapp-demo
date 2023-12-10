@@ -1,0 +1,16 @@
+<div class="add-user">
+    <h2 class="add-user__caption">Добавление пользователя</h2>
+    <div class="add-user__loading loader" *ngIf="userService.loading"></div>
+
+    <ng-container *ngIf="userService.loading === false">
+        <form class="add-user__form form" [formGroup]="addUserForm">
+            <div class="form__controls">
+                <input class="form__control font-basic" type="text" placeholder="Введите имя" [formControlName]="'name'">
+                <input class="form__control font-basic" type="email" placeholder="Введите почту" [formControlName]="'email'">
+            </div>
+            <div class="form__footer">
+                <button class="form__btn font-basic" (click)="addUser()" [disabled]="addUserForm.invalid">Добавить пользователя</button>
+            </div>
+        </form>
+    </ng-container>
+</div>
